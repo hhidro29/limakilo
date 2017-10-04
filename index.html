@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>limakilo</title>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--icon-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="nav">
+        <div class="container header-component">
+          <div class="logo">
+            <a href="#"><img src="gambar\limakilo_logo.png"></a>
+          </div>
+          <div class="middle-navbar">
+            <div class="beranda section-nav">
+              <a href="#" class="active">Beranda</a>
+            </div>
+            <div class="mitra section-nav">
+              <a href="petaniMitra.html">Petani Mitra</a>
+            </div>
+            <div class="belanja section-nav">
+              <a href="belanja.html">Belanja</a>
+            </div>
+            <div class="grosir section-nav">
+              <a href="grosir.html">Grosir</a>
+            </div>
+            <div class="pasar section-nav">
+              <a href="pasarPetani.html">Pasar Petani</a>
+            </div>
+          </div>
+          <div class="right-navbar">
+            <div class="login side-nav set-nav">
+              <span>Masuk</span>
+            </div>
+            <div class="button register set-nav">
+              <span>Daftar</span>
+            </div>
+            <div class="keranjang side-nav set-nav">
+              <span class="icon-cart icon-nav"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="promo-container">
+          <div class="promotion-2x2 row-grid">
+            <img src="gambar/onion-promo-1.jpg">
+          </div>
+          <div class="promotion-2x2 row-grid">
+            <div class="container-2x1 col-grid">
+              <img src="gambar/onion-promo-2.jpg">
+            </div>
+            <div class="container-2x1">
+              <div class="content-1x1">
+                <img src="gambar/onion-promo-1.jpg">
+              </div>
+              <div class="content-1x1 row-grid ">
+                <img src="gambar/onion-promo-1.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-container">
+          <div class="wide-banner row-grid">
+
+          </div>
+        </div>
+      </div>
+      <div class="Limakilo-greeting">
+        <div class="reason-container">
+          <h1>Selamat Datang di Limakilo</h1>
+          <div class="content-center flex-display">
+            <div class="container-col">
+              <div class="col-6 reason">
+                <div class="content-reason">
+                  <h3>Berjualan</h3>
+                  <img src="gambar\Limakilo_10.jpg">
+                  <h5>Saya Petani dan ingin berjualan di limakilo</h5>
+                  <div class="button-1 button-limakilo-1">
+                    <span>Menjadi Petani Mitra</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 row-grid-40 reason">
+                <div class="content-reason">
+                  <h3>Belanja</h3>
+                  <img src="gambar\Limakilo_30.jpg">
+                  <h5>Saya ingin belanja langsung ke petani</h5>
+                  <div class="button-1 button-limakilo-1">
+                    <span>Ayo Belanja</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 row-grid-40 reason">
+                <div class="content-reason">
+                  <h3>Beli Grosir</h3>
+                  <img src="gambar\Limakilo_20.jpg">
+                  <h5>Saya berbelanja dalam jumlah besar dan ingin harga khusus</h5>
+                  <div class="button-1 button-limakilo-1">
+                    <span>Lihat Harga Grosir</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panen-section" ng-app="homeApp">
+        <div class="panel-container">
+          <div class="panel-content">
+            <h1>Komoditas sayuran yang sedang panen</h1>
+            <div class="content-center">
+              <div class="max-width-panel content-center">
+                <div class="position-relative">
+                  <div class=" flex-display slide-touch" ng-controller="homeController">
+                    <div class="container-banner-1 panel-sell-1 komoditasPanen row-grid" ng-repeat="content in contents">
+                      <div panen-directive></div>
+                    </div>
+                  </div>
+                  <div class="slide-button slide-button-left">
+                    <span class="icon-arrow-left2 button-slider-set left"></span>
+                  </div>
+                  <div class="slide-button slide-button-right">
+                    <span class="icon-arrow-right2 button-slider-set right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-container">
+          <div class="company-talk">
+            <div class="footer-logo">
+              <img class="content-center" src="gambar\limakilo_logo.png">
+            </div>
+            <h5>Limakilo adalah sebuah usaha sosial yang bermitra dengan petani kecil untuk memperpendek rantai pasok makanan ke konsumen</h5>
+          </div>
+          <div class="footer-segment">
+            <div class="footer-content">
+              <div class="col-footer">
+                <h3>PT. Limakilo Majubersama Petani</h3>
+                <ul>
+                  <li><h5>+62 81 11 811 374</h5></li>
+                  <li><h5>hi@limakilo.id</h5></li>
+                  <li><h5>Menara Rajawali, Level 7-1, Jln. DR. Ide Agung Gde Agung, Kawasan Mega Kuningan, Jakarta Selatan 12950, Indonesia</h5></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Perusahaan</h3>
+                <ul>
+                  <li><a href="#">Tentang Kami</a></li>
+                  <li><a href="#">karir</a></li>
+                  <li><a href="#">Pertanyaan</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Halaman</h3>
+                <ul>
+                  <li><a href="#">Belaja</a></li>
+                  <li><a href="#">Grosir</a></li>
+                  <li><a href="#">Petani Mitra</a></li>
+                  <li><a href="#">Pasar Petani</a></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Ikuti Kami</h3>
+                <div class="sosmed-list">
+                  <a href="#"><span class="icon-facebook2"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <h4>© 2017 PT. Limakilo Majubersama Petani. All rights reserved.</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/controller/controller.js"></script>
+  <script type="text/javascript" src="js/animation-Jquery.js"></script>
+  <script type="text/javascript" src="js/myJquery.js"></script>
+</html>

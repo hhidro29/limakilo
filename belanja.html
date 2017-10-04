@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>limakilo</title>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--icon-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/angular/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="nav">
+        <div class="container header-component padding-tb-20">
+          <div class="logo">
+            <a href="#"><img src="gambar\limakilo_logo.png"></a>
+          </div>
+          <div class="search-section">
+            <form class="content-center" action="#" method="post">
+              <input type="text" name="" value="" placeholder="Cari di sini" class="textfield-search">
+              <button type="button" name="Cari" class="search-button"><span class="icon-search"></span></button>
+            </form>
+          </div>
+          <div class="right-navbar">
+            <div class="login side-nav set-nav">
+              <span>Masuk</span>
+            </div>
+            <div class="button register set-nav">
+              <span>Daftar</span>
+            </div>
+            <div class="keranjang side-nav set-nav">
+              <span class="icon-cart icon-nav"></span>
+            </div>
+          </div>
+        </div>
+        <div class="container header-component">
+          <div class="middle-navbar margin-auto">
+            <div class="beranda section-nav-2">
+              <a href="index.html">Beranda</a>
+            </div>
+            <div class="mitra section-nav-2">
+              <a href="petaniMitra.html">Petani Mitra</a>
+            </div>
+            <div class="belanja section-nav-2">
+              <a href="belanja.html" class="active">Belanja</a>
+            </div>
+            <div class="grosir section-nav-2">
+              <a href="grosir.html">Grosir</a>
+            </div>
+            <div class="pasar section-nav-2">
+              <a href="pasarPetani.html">Pasar Petani</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="header-content">
+
+        </div>
+      </div>
+      <div class="panen-section" ng-app="homeApp">
+        <div class="panel-container">
+          <div class="panel-content margin-b-small">
+            <h1>Produk Pilihan</h1>
+            <div class="content-center">
+              <div class="max-width-panel content-center">
+                <div class="position-relative">
+                  <div class=" flex-display slide-touch" ng-controller="homeController">
+                    <div class="container-banner-1 panel-sell-1 komoditasPanen row-grid" ng-repeat="content in contents">
+                      <div panen-directive></div>
+                    </div>
+                  </div>
+                  <div class="slide-button slide-button-left">
+                    <span class="icon-arrow-left2 button-slider-set left"></span>
+                  </div>
+                  <div class="slide-button slide-button-right">
+                    <span class="icon-arrow-right2 button-slider-set right"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-container">
+          <div class="panel-content" ng-controller="belanjaController">
+            <h3 class="text-center">Komoditas yang sedang panen hari ini</h3>
+            <div class="partnership-product-2 content-center">
+              <div class="panel-sell-2 margin-all-small" ng-repeat="content in contents | limitTo : show">
+                <div belanja-directive></div>
+              </div>
+            </div>
+            <div class="flex-display margin-tb-small">
+              <span class="button-2 button-more-1 margin-auto" ng-click="moreShow()" ng-show="tampil">Tampilkan Lebih Banyak</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-container">
+          <div class="company-talk">
+            <div class="footer-logo">
+              <img class="content-center" src="gambar\limakilo_logo.png">
+            </div>
+            <h5>Limakilo adalah sebuah usaha sosial yang bermitra dengan petani kecil untuk memperpendek rantai pasok makanan ke konsumen</h5>
+          </div>
+          <div class="footer-segment">
+            <div class="footer-content">
+              <div class="col-footer">
+                <h3>PT. Limakilo Majubersama Petani</h3>
+                <ul>
+                  <li><h5>+62 81 11 811 374</h5></li>
+                  <li><h5>hi@limakilo.id</h5></li>
+                  <li><h5>Menara Rajawali, Level 7-1, Jln. DR. Ide Agung Gde Agung, Kawasan Mega Kuningan, Jakarta Selatan 12950, Indonesia</h5></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Perusahaan</h3>
+                <ul>
+                  <li><a href="#">Tentang Kami</a></li>
+                  <li><a href="#">karir</a></li>
+                  <li><a href="#">Pertanyaan</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Halaman</h3>
+                <ul>
+                  <li><a href="#">Belaja</a></li>
+                  <li><a href="#">Grosir</a></li>
+                  <li><a href="#">Petani Mitra</a></li>
+                  <li><a href="#">Pasar Petani</a></li>
+                </ul>
+              </div>
+              <div class="col-footer padding-l-30">
+                <h3>Ikuti Kami</h3>
+                <div class="sosmed-list">
+                  <a href="#"><span class="icon-facebook2"></span></a>
+                  <a href="#"><span class="icon-twitter"></span></a>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                  <a href="#"><span class="icon-linkedin"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <h4>© 2017 PT. Limakilo Majubersama Petani. All rights reserved.</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/controller/controller.js"></script>
+  <script type="text/javascript" src="js/animation-Jquery.js"></script>
+  <script type="text/javascript" src="js/myJquery.js"></script>
+</html>
